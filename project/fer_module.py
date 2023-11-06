@@ -13,7 +13,7 @@ class FerModule(pl.LightningModule):
         
         if "snn" in mode:
             self.model = SNNModule(
-                2, timesteps=timesteps, output_all=False, n_classes=n_classes, mode=mode
+                2, timesteps=timesteps, n_classes=n_classes
             )
         else:
             self.model = CNNModule(2, timesteps, n_classes)

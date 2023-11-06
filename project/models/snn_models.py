@@ -4,9 +4,9 @@ import torch.nn as nn
 
 
 class SNNModule(nn.Module):
-    def __init__(self, in_channels, timesteps, n_classes, mode="snn"):
+    def __init__(self, in_channels, timesteps, n_classes):
         super(SNNModule, self).__init__()
-        self.encoder = get_encoder_snn(in_channels, timesteps, mode)
+        self.encoder = get_encoder_snn(in_channels, timesteps)
         out_encoder = 512 # sew_resnet_18
 
         self.fc = nn.Linear(out_encoder, n_classes, bias=False)
