@@ -27,7 +27,7 @@ class DVSTransform:
         trans = []
 
         representation = get_frame_representation(
-            sensor_size, timesteps, dataset=dataset
+            sensor_size, timesteps
         )
 
         # BEFORE TENSOR TRANSFORMATION
